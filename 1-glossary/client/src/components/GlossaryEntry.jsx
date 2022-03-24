@@ -25,6 +25,7 @@ class GlossaryEntry extends React.Component {
   handleEditSubmit(e) {
     e.preventDefault();
     this.props.edit(this.props.entry, this.state.newDef);
+    this.setState({ newDef: '' });
   }
 
   render() {

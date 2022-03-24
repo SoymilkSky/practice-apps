@@ -4,15 +4,17 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ''
+      query: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.search(this.state.query);
-    this.setState({ query: '' });
+    if (this.state.query.length !== 0) {
+      this.props.search(this.state.query);
+      this.setState({ query: '' });
+    }
   }
 
   render() {
