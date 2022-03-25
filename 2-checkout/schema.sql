@@ -1,0 +1,11 @@
+DROP DATABASE checkout;
+
+CREATE DATABASE checkout;
+
+USE checkout;
+
+CREATE TABLE forms (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  user TINYTEXT NOT NULL,
+  PRIMARY KEY (id)
+);
