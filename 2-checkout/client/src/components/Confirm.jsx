@@ -1,13 +1,38 @@
 import React, { useState } from 'react';
 
-function Confirm({ setPage, form1, form2, form3 }) {
+function Confirm({ setPage, formData }) {
   const [confirmed, setConfirmed] = useState(false);
 
   return (
     <div>
       {confirmed ? <h2>Checkout Complete!</h2> :
-        <div> confirm all your information is correct
-          <div>
+        <div>confirm all your information is correct
+          {formData.map((form, index) =>
+            <div key={index}>
+              {Object.entries(form).map((kv, index) =>
+                <div key={index}>{ kv[0] }: { kv[1] }</div>
+              )}
+              <br></br>
+            </div>
+          )}
+
+          {/* <div>user information</div>
+            {Object.entries(form1).map((kv, index) =>
+              <div key={index}>{kv[0]}: {kv[1]}</div>
+            )}
+          <br></br>
+          <div>address information</div>
+            {Object.entries(form2).map((kv, index) =>
+              <div key={index}>{kv[0]}: {kv[1]}</div>
+            )}
+          <br></br>
+          <div>payment information</div>
+            {Object.entries(form3).map((kv, index) =>
+              <div key={index}>{kv[0]}: {kv[1]}</div>
+            )}
+           <br></br> */}
+
+          {/* <div>
             <div>user information</div>
             <span>name: </span><br></br>
             <span>email: </span><br></br>
@@ -33,7 +58,7 @@ function Confirm({ setPage, form1, form2, form3 }) {
             <span>expiration date: </span><br></br>
             <span>cvv: </span><br></br>
             <span>zip code: </span><br></br>
-          </div><br></br>
+          </div><br></br> */}
           <button onClick={ () => setConfirmed(true) }>Confirm</button>
         </div>
       }
