@@ -6,6 +6,18 @@ USE checkout;
 
 CREATE TABLE forms (
   id INTEGER NOT NULL AUTO_INCREMENT,
-  user TINYTEXT NOT NULL,
+  name TINYTEXT,
+  email TINYTEXT,
+  password TINYTEXT,
+  line1 TINYTEXT,
+  line2 TINYTEXT,
+  city TINYTEXT,
+  state TINYTEXT,
+  zip INT,
+  phoneNumber INT,
+  creditCardNum INT,
+  expDate INT,
+  CVV INT,
+  cardZip INT,
   PRIMARY KEY (id)
 );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Confirm({ setPage, formData }) {
+function Confirm({ setPage, sendData, formData }) {
   const [confirmed, setConfirmed] = useState(false);
 
   return (
@@ -59,7 +59,7 @@ function Confirm({ setPage, formData }) {
             <span>cvv: </span><br></br>
             <span>zip code: </span><br></br>
           </div><br></br> */}
-          <button onClick={ () => setConfirmed(true) }>Confirm</button>
+          <button onClick={ () => { setConfirmed(true); sendData(); } }>Confirm</button>
         </div>
       }
       <br></br>

@@ -1,6 +1,11 @@
 import React from 'react';
 
 function Form3({ setPage, setForm3, form3 }) {
+
+  function handleChange(e) {
+    setForm3({ ...form3, [e.target.name]: e.target.value });
+  }
+
   return (
     <div>
       <h1>payment information</h1>
