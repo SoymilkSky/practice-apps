@@ -16,7 +16,14 @@ db.connectAsync()
   .catch((err) => console.log(err));
 
 function post(formData) {
-  db.queryAsync("INSERT INTO forms VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+  // return new Promise((resolve, reject) => {
+  //   db.queryAsync()
+  // })
+  let insert = "INSERT INTO forms(name, email, password, line1, line2, city, state, zip, phoneNumber, creditCardNum, expDate, CVV, cardZip) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  db.queryAsync(insert, formData, (err, data) => {
+    if (err) { console.log(err) }
+    else { return data }
+  })
 }
 
 module.exports = {

@@ -29,8 +29,9 @@ class Add extends React.Component {
           <textarea
             placeholder="enter a definition"
             value={this.state.definition}
+            style={{resize: "none"}}
             rows="4"
-            cols="69"
+            cols="45"
             onChange={e => this.setState({definition: e.target.value})}>
           </textarea>
           <br></br>

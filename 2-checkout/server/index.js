@@ -5,7 +5,7 @@ const sessionHandler = require("./middleware/session-handler");
 const logger = require("./middleware/logger");
 
 // Establishes connection to the database on server start
-const db = require("./db");
+const sql = require("./db");
 
 const app = express();
 
@@ -22,8 +22,11 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 app.use(express.json());
 
 app.post('/api/checkout', (req, res) => {
-  console.log(req.body);
-  res.end();
+  sql.post(req.body);
+  res.status(201).send('successful post');
+  // sql.post(req.body)
+  //   .then(res.status(201).send('successful post'))
+  //   .catch(err => console.log(err));
 })
 
 app.listen(process.env.PORT);

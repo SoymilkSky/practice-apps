@@ -20,39 +20,6 @@ function Form2({ setPage, setForm2, form2 }) {
               <br></br>
           </div>
           ))}
-
-        {/* <input
-          name="line1"
-          value={form2.line1}
-          placeholder="line 1"
-          onChange={ (e) => handleChange(e) }/><br></br>
-        <input
-          name="line2"
-          value={form2.line2}
-          placeholder="line 2"
-          onChange={ (e) => handleChange(e)}/><br></br>
-        <input
-          name="city"
-          value={form2.city}
-          placeholder="city"
-          onChange={ (e) => handleChange(e) }/><br></br>
-        <input
-          name="state"
-          value={form2.state}
-          placeholder="state"
-          onChange={ (e) => handleChange(e) }/><br></br>
-        <input
-          name="zip"
-          value={form2.zip}
-          placeholder="zip"
-          onChange={ (e) => handleChange(e) }/><br></br>
-        <br></br>
-        <div>phone number</div>
-        <input
-          name="phoneNumber"
-          value={form2.phoneNumber}
-          placeholder="phone number"
-          onChange={ (e) => handleChange(e)} /> */}
       </form>
       <button onClick={ () => setPage(1) }>Back</button>
       <button onClick={ () => setPage(3) }>Next</button>

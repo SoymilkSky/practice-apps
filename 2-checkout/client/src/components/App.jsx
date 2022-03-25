@@ -21,8 +21,8 @@ function App() {
   }
 
   function sendToServer() {
-    console.log('data sent to server');
-    axios.post('/api/checkout', {form1, form2, form3})
+    let formData = Object.values(form1).concat(Object.values(form2)).concat(Object.values(form3));
+    axios.post('/api/checkout', formData)
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }

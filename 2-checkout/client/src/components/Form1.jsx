@@ -20,23 +20,6 @@ function Form1({ setPage, setForm1, form1 }) {
               <br></br>
           </div>
         ))}
-        {/* <input
-          name="name"
-          value={form1.name}
-          placeholder="name"
-          onChange={ (e) => handleChange(e) }/>
-        <br></br>
-        <input
-          name="email"
-          value={form1.email}
-          placeholder="e-mail address"
-          onChange={ (e) => handleChange(e) }/>
-        <br></br>
-        <input
-          name="password"
-          value={form1.password}
-          placeholder="password"
-          onChange={ (e) => handleChange(e) }/> */}
         <br></br>
       </form>
       <button onClick={ () => setPage(0) }>Back</button>
